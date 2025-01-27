@@ -2,12 +2,12 @@ import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
 
 const placeholders = await fetchPlaceholders(getMetadata('locale'));
 
-const { btnNxt,btnPre} = placeholders;
+const { btnNxt,btnPre } = placeholders;
 export default function decorate(block) {
 
-  console.log("placeholders ---> ",placeholders,btnNxt,btnPre);
+  console.log('placeholders ---> ', placeholders,btnNxt,btnPre);
     const rows= [...block.children];
-    [...block.children].forEach((row,r) => {
+    [...block.children].forEach((row, r) => {
       if(r==0){
           const nextbtn = document.createElement('button');
           nextbtn.classList.add('btn');
@@ -24,17 +24,16 @@ export default function decorate(block) {
           row.replaceWith(prebtn);
       }else{
           row.classList.add('slide');
-          [...row.children].forEach((col,c) => {
+          [...row.children].forEach((col, c) => {
             if(c==1){
               col.classList.add('slide-text');
             }
-        
           });
       }
     }); 
   
   
-    const slides = document.querySelectorAll(".slide");
+    const slides = document.querySelectorAll('.slide');
   
     // loop through slides and set each slides translateX
     slides.forEach((slide, indx) => {
@@ -42,7 +41,7 @@ export default function decorate(block) {
     });
   
     // select next slide button
-  const nextSlide = document.querySelector(".btn-next");
+  const nextSlide = document.querySelector('.btn-next');
   
   // current slide counter
   let curSlide = 0;
@@ -50,7 +49,7 @@ export default function decorate(block) {
   let maxSlide = slides.length - 1;
   
   // add event listener and navigation functionality
-  nextSlide.addEventListener("click", function () {
+  nextSlide.addEventListener('click', function () {
   // check if current slide is the last and reset current slide
   if (curSlide === maxSlide) {
     curSlide = 0;
@@ -65,7 +64,7 @@ export default function decorate(block) {
   });
   
   // select next slide button
-  const prevSlide = document.querySelector(".btn-prev");
+  const prevSlide = document.querySelector('.btn-prev');
   
   // add event listener and navigation functionality
   prevSlide.addEventListener("click", function () {
