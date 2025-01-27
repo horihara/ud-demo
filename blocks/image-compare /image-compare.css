@@ -1,6 +1,7 @@
 .image-compare {
 	position: relative;
 }
+
 /* 
 	Note: <img> must use fixed widths 
 	flexible widths will not work 
@@ -10,16 +11,19 @@
 		max-width: calc(100vw - 32px) !important;
    }
 }
+
 @media (min-width: 600px) {
 	.image-compare img {
 		max-width: calc(100vw - 64px) !important;
    }
 }
+
 @media (min-width: 1200px) {
 	.image-compare img {
 		max-width: 1200px !important;
    }
 }
+
 div.image-compare-left {
 	position: absolute;
 	top: 0;
@@ -28,9 +32,11 @@ div.image-compare-left {
 	overflow: hidden;
 	border-right: 1px solid rgba(255,255,255, .4);
 }
+
 .image-compare:hover div.image-compare-left {
 	border-right: 1px solid rgba(255,255,255, .8);
 }
+
 .image-compare-slider {
 	position: absolute;
 	width: calc( 100% + 20px);
@@ -41,6 +47,7 @@ div.image-compare-left {
 	justify-content: center;
 	align-items: center;
 }
+
 .image-compare-slider input {
 	width: 100%;
 	height: 100%;
@@ -50,14 +57,17 @@ div.image-compare-left {
 	margin: 0;
 	border: 0;
 }
+
 .image-compare-slider input:hover {
 	border: 0;
 }
+
 input[type=range] {
 	-webkit-appearance: none;
 	width: 100%;
 	background: transparent;
 }
+
 input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	height: 20px;
@@ -68,12 +78,15 @@ input[type=range]::-webkit-slider-thumb {
 	margin-top: 0;
 	box-shadow: 1px 1px 1px #000, 0px 0px 1px #000;
 }
+
 input[type=range]:hover::-webkit-slider-thumb {
 	background: #fff;
 }
+
 input[type=range]:hover {
 	outline: none;
 }
+
 input[type=range]:focus {
 	outline: none;
 }
