@@ -42,7 +42,7 @@ export default function decorate(block) {
   // maximum number of slides
   const maxSlide = slides.length - 1;
   // add event listener and navigation functionality
-  nextSlide.addEventListener('click', function () {
+  nextSlide.addEventListener('click', () => {
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
       curSlide = 0;
@@ -57,7 +57,7 @@ export default function decorate(block) {
   // select next slide button
   const prevSlide = document.querySelector('.btn-prev');
   // add event listener and navigation functionality
-  prevSlide.addEventListener('click', function () {
+  prevSlide.addEventListener('click', () => {
     // check if current slide is the first and reset current slide to last
     if (curSlide === 0) {
       curSlide = maxSlide;
