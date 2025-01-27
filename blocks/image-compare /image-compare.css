@@ -6,19 +6,19 @@
 	Note: <img> must use fixed widths 
 	flexible widths will not work 
 */
-@media (min-width: 300px) {
+@media (min-width >= 300px) {
 	.image-compare img {
 		max-width: calc(100vw - 32px) !important;
    }
 }
 
-@media (min-width: 600px) {
+@media (min-width >= 600px) {
 	.image-compare img {
 		max-width: calc(100vw - 64px) !important;
    }
 }
 
-@media (min-width: 1200px) {
+@media (min-width >= 1200px) {
 	.image-compare img {
 		max-width: 1200px !important;
    }
@@ -30,11 +30,11 @@ div.image-compare-left {
 	left: 0;
 	width: 50%;
 	overflow: hidden;
-	border-right: 1px solid rgba(255,255,255, .4);
+	border-right: 1px solid rgba(255 255 255 / 40%);
 }
 
 .image-compare:hover div.image-compare-left {
-	border-right: 1px solid rgba(255,255,255, .8);
+	border-right: 1px solid rgba(255 255 255 / 80%);
 }
 
 .image-compare-slider {
