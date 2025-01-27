@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
 	const right = block.querySelector('div:nth-child(1)');
 	right.className = 'image-compare-right';
 
