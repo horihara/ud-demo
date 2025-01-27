@@ -47,7 +47,7 @@ export default function decorate(block) {
     if (curSlide === maxSlide) {
       curSlide = 0;
     } else {
-      curSlide = curSlide + 1;
+      curSlide += 1;
     }
     //   move slide by -100%
     slides.forEach((slide, indx) => {
@@ -62,7 +62,7 @@ export default function decorate(block) {
     if (curSlide === 0) {
       curSlide = maxSlide;
     } else {
-      curSlide = curSlide - 1;
+      curSlide -= 1;
     }
     //   move slide by 100%
     slides.forEach((slide, indx) => {
