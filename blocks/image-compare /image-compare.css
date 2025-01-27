@@ -6,19 +6,19 @@
 	Note: <img> must use fixed widths 
 	flexible widths will not work 
 */
-@media (min-width >= 300px) {
+@media (width >= 300px) {
 	.image-compare img {
 		max-width: calc(100vw - 32px) !important;
    }
 }
 
-@media (min-width >= 600px) {
+@media (width >= 600px) {
 	.image-compare img {
 		max-width: calc(100vw - 64px) !important;
    }
 }
 
-@media (min-width >= 1200px) {
+@media (width >= 1200px) {
 	.image-compare img {
 		max-width: 1200px !important;
    }
@@ -79,7 +79,7 @@ input[type='range']::-webkit-slider-thumb {
 	box-shadow: 1px 1px 1px #000, 0px 0px 1px #000;
 }
 
-input[type=range]:hover::-webkit-slider-thumb {
+input[type='range']:hover::-webkit-slider-thumb {
 	background: #fff;
 }
 
