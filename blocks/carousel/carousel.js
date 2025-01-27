@@ -14,7 +14,7 @@ export default function decorate(block) {
       const node = document.createTextNode(btnNxt);
       nextbtn.append(node);
       row.replaceWith(nextbtn);
-    } else if (r === rows.length - 1){
+    } else if (r === rows.length - 1) {
       const prebtn = document.createElement('button');
       prebtn.classList.add('btn');
       prebtn.classList.add('btn-prev');
@@ -40,9 +40,9 @@ export default function decorate(block) {
   // current slide counter
   let curSlide = 0;
   // maximum number of slides
-  let maxSlide = slides.length - 1;
+  const maxSlide = slides.length - 1;
   // add event listener and navigation functionality
-  nextSlide.addEventListener('click', function () {
+  nextSlide.addEventListener("click", function () {
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
       curSlide = 0;
