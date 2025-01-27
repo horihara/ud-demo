@@ -11,7 +11,7 @@ export default function decorate(block) {
   left.parentNode.insertBefore(slider, left.nextSibling);
   const resizeLeft = () => {
     left.value = 50;
-    return e => left.style.width = `${e.target.value}%`;
+    return (e) => left.style.width = `${e.target.value}%`;
   };
   sliderButton.addEventListener('input', resizeLeft());
 }
