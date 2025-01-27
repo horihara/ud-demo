@@ -14,7 +14,7 @@ export default function decorate(block) {
       const node = document.createTextNode(btnNxt);
       nextbtn.append(node);
       row.replaceWith(nextbtn);
-    } else if (r == rows.length-1){
+    } else if (r == rows.length - 1){
       const prebtn = document.createElement('button');
       prebtn.classList.add('btn');
       prebtn.classList.add('btn-prev');
