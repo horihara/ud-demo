@@ -24,7 +24,7 @@ export default function decorate(block) {
     } else {
       row.classList.add('slide');
       [...row.children].forEach((col, c) => {
-        if (c === 1){
+        if (c === 1) {
           col.classList.add('slide-text');
         }
       });
@@ -42,12 +42,12 @@ export default function decorate(block) {
   // maximum number of slides
   const maxSlide = slides.length - 1;
   // add event listener and navigation functionality
-  nextSlide.addEventListener("click", function () {
+  nextSlide.addEventListener('click', function () {
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
       curSlide = 0;
     } else {
-      curSlide++;
+      curSlide = curSlide + 1;
     }
     //   move slide by -100%
     slides.forEach((slide, indx) => {
@@ -62,7 +62,7 @@ export default function decorate(block) {
     if (curSlide === 0) {
       curSlide = maxSlide;
     } else {
-      curSlide--;
+      curSlide = curSlide - 1;
     }
     //   move slide by 100%
     slides.forEach((slide, indx) => {
