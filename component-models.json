@@ -6,8 +6,7 @@
         "component": "reference",
         "name": "image",
         "label": "Image",
-        "multi": false,
-        "value": "/content/dam/ud-demo/hero.png"
+        "multi": false
       },
       {
         "component": "text",
